@@ -1,0 +1,16 @@
+[project]
+name = "HET-crack-evaluator"
+description = "A tool for evaluating cracks using HET methodology."
+authors = ["Muhammad Farhan <mfarhanzafrani@gmail.com>"]
+version = "0.1.0"
+license = "MIT"
+
+requires-python = ">=3.10"
+
+[dependencies]
+streamlit = "*"
+pandas = "*"
+numpy = "*"
+plotly = "*"
+psycopg2-binary = "*"
+scipy = "*"
