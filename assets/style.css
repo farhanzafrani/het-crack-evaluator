@@ -1,0 +1,85 @@
+/* Modern Design System */
+:root {
+    --bmw-blue: #1C69D4;
+    --bmw-dark-blue: #06408F;
+    --bmw-grey: #6F6F6F;
+    --bmw-light-grey: #F2F2F2;
+    --bmw-black: #000000;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+.stApp {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Glassmorphism for containers */
+[data-testid="stVerticalBlock"]>div:has(div.stPlotlyChart) {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: white;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* Custom Headers */
+h1,
+h2,
+h3 {
+    color: var(--bmw-dark-blue);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700 !important;
+}
+
+/* Button style */
+.stButton>button {
+    background-color: var(--bmw-blue);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: var(--bmw-dark-blue);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Highlighting cards/stats */
+.metric-container {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid var(--bmw-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Tabs styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 24px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 4px 4px 0 0;
+    gap: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: var(--bmw-light-grey);
+    border-bottom: 2px solid var(--bmw-blue) !important;
+    font-weight: bold;
+}
